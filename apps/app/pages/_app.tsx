@@ -1,23 +1,22 @@
 import { AppProps } from 'next/app';
 import Head from 'next/head';
-import './styles.css';
+import './styles.scss';
 
 function CustomApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Welcome to app!</title>
+        <title>Übersetzungsbüro Otto Schuster Rumänisch Deutsch</title>
       </Head>
-      <div className="app">
-        <header className="flex">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/nx-logo-white.svg" alt="Nx logo" width="75" height="50" />
-          <h1>Welcome to app!</h1>
-        </header>
-        <main>
-          <Component {...pageProps} />
-        </main>
-      </div>
+      <header>
+        <h1>Übersetzungsbüro Schuster</h1>
+        <button className="iconButton">
+          <img src="/menu.svg" alt="" />
+        </button>
+      </header>
+      <main>
+        <Component {...pageProps} />
+      </main>
     </>
   );
 }
